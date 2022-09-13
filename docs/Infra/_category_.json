@@ -1,8 +1,8 @@
 {
-  "label": "Infra",
+  "label": "基础设施",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "基础设施"
+    "description": "Infra"
   }
 }
