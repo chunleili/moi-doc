@@ -13,10 +13,10 @@ moi (Moving Object Visualization, 读作movie去掉v, 因为i比v可爱所以保
 
 **一切都是为了直接服务于图形学仿真科研**。在这个流水线上，我们需要以下轮子：
 
-1. 针对于线性方程组求解的数学库: Math
+1. 针对于线性方程组求解的数学库: MathUtils
 2. 读取和保存常见网格的功能: MeshIO
 3. 流体的表面重建: SurfRecon
-4. 离线渲染(path tracer): Render
+4. 离线渲染(path tracer): Renderer
 
 
 
