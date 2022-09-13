@@ -2,11 +2,11 @@
 sidebar_position: 4
 ---
 
-# Markdown Features
+# Markdown 用法
 
-Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional features**.
+Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)**
 
-## Front Matter
+## 扉页
 
 Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
 
@@ -25,25 +25,19 @@ slug: /my-custom-url
 Markdown text with [links](./hello.md)
 ```
 
-## Links
+## 链接
 
-Regular Markdown links are supported, using url paths or relative file paths.
-
-```md
-Let's see how to [Create a page](/create-a-page).
-```
+链接到某个markdown页面
 
 ```md
-Let's see how to [Create a page](./create-a-page.md).
+链接到某个页面 [MathUtils](Infra/MathUtils.md).
 ```
 
-**Result:** Let's see how to [Create a page](./create-a-page.md).
+**Result:** 链接到某个页面 [MathUtils](Infra/MathUtils.md).
 
-## Images
-
-Regular Markdown images are supported.
-
-You can use absolute paths to reference images in the static directory (`static/img/docusaurus.png`):
+## 图片
+所有图片放到static/img文件夹内了 例如
+(`static/img/docusaurus.png`):
 
 ```md
 ![Docusaurus logo](/img/docusaurus.png)
@@ -51,11 +45,10 @@ You can use absolute paths to reference images in the static directory (`static/
 
 ![Docusaurus logo](/img/docusaurus.png)
 
-You can reference images relative to the current file as well, as shown in .
 
-## Code Blocks
+## 代码
 
-Markdown code blocks are supported with Syntax highlighting.
+代码支持高亮
 
     ```jsx title="src/components/HelloDocusaurus.js"
     function HelloDocusaurus() {
@@ -71,9 +64,9 @@ function HelloDocusaurus() {
 }
 ```
 
-## Admonitions
+## 警告
 
-Docusaurus has a special syntax to create admonitions and callouts:
+可以简单地使用警告和Tips块
 
     :::tip My tip
 
@@ -99,7 +92,7 @@ This action is dangerous
 
 :::
 
-## MDX and React Components
+## 拓展的markdown语法：MDX
 
 [MDX](https://mdxjs.com/) can make your documentation more **interactive** and allows using any **React components inside Markdown**:
 
