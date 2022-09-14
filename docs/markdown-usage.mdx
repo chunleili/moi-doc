@@ -4,26 +4,10 @@ sidebar_position: 4
 
 # Markdown 用法
 
-Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)**
+Docusaurus 支持的markdown语法请查阅： **[Markdown](https://daringfireball.net/projects/markdown/syntax)**
 
-## 扉页
+一些基本用法比如用`#`来设定标题，以及使用两个星号来**加粗字体**，我们就不赘述了。
 
-Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
-
-```text title="my-doc.md"
-// highlight-start
----
-id: my-doc-id
-title: My document title
-description: My document description
-slug: /my-custom-url
----
-// highlight-end
-
-## Markdown heading
-
-Markdown text with [links](./hello.md)
-```
 
 ## 链接
 
@@ -36,7 +20,7 @@ Markdown text with [links](./hello.md)
 **Result:** 链接到某个页面 [MathUtils](Infra/MathUtils.md).
 
 ## 图片
-所有图片放到static/img文件夹内了 例如
+请把所有图片放到static/img文件夹内，例如
 (`static/img/docusaurus.png`):
 
 ```md
@@ -48,7 +32,7 @@ Markdown text with [links](./hello.md)
 
 ## 代码
 
-代码支持高亮
+用三个反单引号（键盘最左上角的那个）包裹代码。代码支持高亮。你可以指定代码的语言。
 
     ```jsx title="src/components/HelloDocusaurus.js"
     function HelloDocusaurus() {
@@ -64,37 +48,70 @@ function HelloDocusaurus() {
 }
 ```
 
+## 引用
+只需要把文本缩进两次，就能让其变为引用，被引用块所包裹。
+
+    只需要把文本缩进两次，就能让其变为引用，被引用块所包裹。
+
+## 纯文本
+
+只需要使用\`反单引号\`，就可以使用纯文本
+
+只需要使用`反单引号`，就可以使用纯文本
+
 ## 警告
 
-可以简单地使用警告和Tips块
+可以简单地使用警告和Tips块。用三个冒号开始和结尾，如下：
 
-    :::tip My tip
+    :::tip 我的tip
 
-    Use this awesome feature option
-
-    :::
-
-    :::danger Take care
-
-    This action is dangerous
+    这是一个tip
 
     :::
 
-:::tip My tip
+    :::danger 我的警告
 
-Use this awesome feature option
+    这是一个danger警告
+
+    :::
+
+:::tip 我的tip
+
+这是一个tip
 
 :::
 
-:::danger Take care
+:::danger 我的警告
 
-This action is dangerous
+这是一个danger警告
 
 :::
+
+## 扉页
+（扉页不是必须的）
+Markdown文档可以增加一些头部的元数据，被称为[Front Matter](https://jekyllrb.com/docs/front-matter/):
+
+```text title="my-doc.md"
+// highlight-start
+---
+id: my-doc-id
+title: My document title
+description: My document description
+slug: /my-custom-url
+---
+// highlight-end
+
+## Markdown heading
+
+Markdown text with [links](./hello.md)
+
+```
+
 
 ## 拓展的markdown语法：MDX
 
-[MDX](https://mdxjs.com/) can make your documentation more **interactive** and allows using any **React components inside Markdown**:
+这是一些可选的高级功能，你可以不用。
+[MDX](https://mdxjs.com/) 可以让你使用React做可交互的一些拓展功能。这时请保存为`.mdx`而非`.md`:
 
 ```jsx
 export const Highlight = ({children, color}) => (

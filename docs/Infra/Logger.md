@@ -1,0 +1,3 @@
+# 方便Debug的日志库
+
+在太极中Debug通常需要先把数据写到numpy之中，然后再用numpy的np.savetxt函数来导出到txt，方便观察数据。
