@@ -1,7 +1,7 @@
 ---
 sidebar_label: '基本介绍'
 sidebar_position: 1
-slug: /
+# slug: /
 ---
 
 # 基本介绍
