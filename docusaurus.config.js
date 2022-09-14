@@ -12,12 +12,12 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  // favicon: 'img/moi-ico.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'chunleili', // Usually your GitHub org/user name.
+  projectName: 'moi-doc', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -33,12 +33,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          // routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/chunleili/moi-doc',
+          editUrl:
+            'https://github.com/chunleili/moi-doc',
         },
+        blog:false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -53,7 +55,7 @@ const config = {
         title: 'moi',
         logo: {
           alt: 'Logo',
-          src: 'img/logo.svg',
+          src: 'img/moi-logo.svg',
         },
         items: [
           {

@@ -1,8 +1,10 @@
 ---
 sidebar_label: '基本介绍'
 sidebar_position: 1
+slug: /
 ---
 
+# 基本介绍
 # 这是什么？
 moi (Moving Object Visualization, 读作movie去掉v, 因为i比v可爱所以保留i) 是一个基于taichi的仿真工具包。我们希望打造一个用于图形学仿真算法验证与创新的轮子，让你摆脱多余的工作，直接关注于最核心的仿真算法。这可以被认为是一个实验的**底座**台子，你可以在上面安插上自己的算法。
 
