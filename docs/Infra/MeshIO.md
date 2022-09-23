@@ -6,10 +6,10 @@ sidebar_position: 2
 
 我们参考并使用了meshio这个开源库：[meshio](https://github.com/nschloe/meshio)
 
-# OBJ格式
+## OBJ格式
 目前已经实现了OBJ格式的读取和保存
 
-## example
+### example
 使用示例请看 src\Infra\MeshIO\test_obj.py
 
 请先cd到这个文件所在的目录，然后用
@@ -20,7 +20,7 @@ python test_obj.py
 它就是我们读入Dragon_50k.obj之后又写出来的！
 """
 
-## API
+### API
 读取OBJ网格
 points, cells = read_obj("Dragon_50k.obj")
 
