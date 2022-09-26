@@ -7,14 +7,14 @@ sidebar_position: 1
 
 ---
 
-# 网格基类：GridBase
+## 网格基类：GridBase
 作为其他类型网格的基类
-## 数据成员
+### 数据成员
 + size_x：x维度的长度  
 + size_y：y维度的长度  
 + size_z：z维度的长度 
 + data: ti.field，具体数据类型由子类决定
-## 方法
+### 方法
 + ```get_index(self, i: ti.i32, j: ti.i32, k: ti.i32)```  
   根据下标获得索引
 
@@ -29,14 +29,14 @@ sidebar_position: 1
 
 ---
 
-# IntGrid
+## IntGrid
 整数网格场
 
 ---
 
-# FlagGrid
+## FlagGrid
 继承自IntGrid
-## 方法
+### 方法
 + ```is_fluid(self, i: ti.i32, j: ti.i32, k: ti.i32) -> bool```  
   判断一个网格是否为流体类型
 
@@ -64,32 +64,32 @@ sidebar_position: 1
 + ```is_no_slip(self, i: ti.i32, j: ti.i32, k: ti.i32) -> bool```  
   判断一个网格是否为NoSlip（用于LBM）
 
-# RealGrid
+## RealGrid
 实数网格
 
 ---
 
-# Grid4D
+## Grid4D
 4维实数网格，用于LBM。
 
 ---
 
-# Vec3Grid
-## 方法
+## Vec3Grid
+### 方法
 + ```join(self, b: ti.template())```
   将2个场模长的最小的向量赋值给`self.data`
 
 ---
 
-# MACGrid
-## 数据成员
+## MACGrid
+### 数据成员
 + x  
   x维度的数据
 + y  
   y维度的数据
 + z  
   z维度的数据
-## 方法
+### 方法
 + ```get_mac_x(self, i: ti.i32, j: ti.i32, k: ti.i32)```  
   获取x场i，j，k位置的三维向量值
 
@@ -104,7 +104,7 @@ sidebar_position: 1
 
 ---
 
-# example
+## example
 + 创建一个场
   ```
   grid_int = IntGrid(3, 4, 5)
