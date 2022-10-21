@@ -21,7 +21,7 @@ class Particle_Base():
   postion: vec3f
   velocity: vec3f
 ```
-> vec3f代表一个三维float类型固定大小数组，在cpp中对应std::array<float,3>, 在taichi中为ti.Vector(float,3)。
+> vec3f代表一个三维float类型固定大小数组，在cpp中对应`std::array<float,3>`, 在taichi中为`ti.Vector(float,3)`。
 
  在有些方法中，粒子质量被统一设置为1。对于这些方法，粒子质量也是冗余的。因此我们才仅仅放入位置和速度这两种最基本的数据。
 
@@ -34,7 +34,7 @@ class Particle_Nei(Particle_Base):
   neighbors: int_field
 ```
 
-> int_field代表一个一维数组，其元素均为int类型的。在cpp中对应std::vector<int>，在taichi中对应ti.field(int,xxx)
+> int_field代表一个一维数组，其元素均为int类型的。在cpp中对应`std::vector<int>`，在taichi中对应`ti.field(int,xxx)`
   
 不需要存储numNeighbors，因为neighbors数组应该自己就知晓自己的大小。neighbors数组应当在邻域搜索时候动态增长。
 
