@@ -21,8 +21,8 @@ class Particle_Base():
   postion: vec3f
   velocity: vec3f
 ```
-vec3f代表一个三维float类型固定大小数组，在cpp中对应std::array<float,3>, 在taichi中为ti.Vector(float,3)。
-（在有些方法中，粒子质量被统一设置为1。对于这些方法，粒子质量也是冗余的。因此我们才仅仅放入位置和速度这两种最基本的数据。）
+> vec3f代表一个三维float类型固定大小数组，在cpp中对应std::array<float,3>, 在taichi中为ti.Vector(float,3)。
+ 在有些方法中，粒子质量被统一设置为1。对于这些方法，粒子质量也是冗余的。因此我们才仅仅放入位置和速度这两种最基本的数据。
 
 
 ## 需要邻域搜索的粒子Particle_Nei
@@ -33,7 +33,7 @@ class Particle_Nei(Particle_Base):
   neighbors: int_field
 ```
 
-int_field代表一个一维数组，其元素均为int类型的。在cpp中对应std::vector<int>，在taichi中对应ti.field(int,xxx)
+> int_field代表一个一维数组，其元素均为int类型的。在cpp中对应std::vector<int>，在taichi中对应ti.field(int,xxx)
 不需要存储numNeighbors，因为neighbors数组应该自己就知晓自己的大小。neighbors数组应当在邻域搜索时候动态增长。
 
 ## 拥有寿命的粒子 Particle_Age
@@ -47,6 +47,7 @@ class Particle_Age(Particle_Base):
 ```
 age 为当前年龄，以s为单位。从粒子注入场景开始计算。life_span为粒子寿命，在粒子产生的时候就赋予，为固定值。
 alive为是否存活。
+  
 当age>=life_span的时候，粒子自动灭亡。为保证计算速度，我们可以采用垃圾回收式的收回内存。粒子被标记为alive:false，表示粒子已经死亡。但尚未收回内存。
 等经过一定时间步后，例如500步，再对已经死亡的粒子进行统一回收。
   
